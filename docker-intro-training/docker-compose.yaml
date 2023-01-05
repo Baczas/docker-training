@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+
+  redis:
+    image: redis
+    container_name: redis
+    ports: 
+     - '6379:6379'
+
+  web-eu:
+    environment:
+      REGION: EU
+    image: app-2
+    container_name: app-redis-eu
+    volumes:
+      - .:/app-3
+    command: ["python", "/app-3/app-3.py"]
+    ports:
+     - "5004:5000"
+    depends_on:
+     - redis
+
+  web-noneu:
+    environment:
+      REGION: NONEU
+    image: app-2
+    volumes:
+      - .:/app-3
+    command: ["python", "/app-3/app-3.py"]
+    container_name: app-redis-noneu
+    restart: always
+    ports:
+     - "5006:5000"
+    depends_on:
+     - redis
