@@ -22,10 +22,10 @@
     lub: \
     `docker compose up`
 
-1. **URUCHOMIENIE I EKSLOPARACJA I RESTART KONTENERA:** 
-  >>> `docker exec -it app-redis-noneu bash` \
-  `top ` \
-  `^C` \
-  `kill -9 7` \
-  `docker ps`
+1. **URUCHOMIENIE I EKSLOPARACJA I RESTART KONTENERA:**  \
+  &nbsp;&nbsp;&nbsp;&nbsp;`docker exec -it app-redis-noneu bash` \
+  &nbsp;&nbsp;&nbsp;&nbsp;`top ` \
+  &nbsp;&nbsp;&nbsp;&nbsp;`^C` \
+  &nbsp;&nbsp;&nbsp;&nbsp;`kill -9 7` \
+  &nbsp;&nbsp;&nbsp;&nbsp;`docker ps`
 
